@@ -11,6 +11,8 @@
 		03C02C0D1C59FC0F000F88B9 /* TypedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C02C0C1C59FC0F000F88B9 /* TypedKey.swift */; };
 		03C02C3B1C59FE5E000F88B9 /* TypedKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C02C3A1C59FE5E000F88B9 /* TypedKeyTests.swift */; };
 		03C02C3D1C59FE5E000F88B9 /* TypedKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C02BF51C59FAAF000F88B9 /* TypedKey.framework */; };
+		03C02C441C59FFEF000F88B9 /* NSUserDefaults+TypedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C02C431C59FFEF000F88B9 /* NSUserDefaults+TypedKey.swift */; };
+		03C02C471C5A0188000F88B9 /* NSUserDefaults+TypedKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C02C451C5A014F000F88B9 /* NSUserDefaults+TypedKeyTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,8 @@
 		03C02C0C1C59FC0F000F88B9 /* TypedKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedKey.swift; sourceTree = "<group>"; };
 		03C02C381C59FE5E000F88B9 /* TypedKey-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TypedKey-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C02C3A1C59FE5E000F88B9 /* TypedKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedKeyTests.swift; sourceTree = "<group>"; };
+		03C02C431C59FFEF000F88B9 /* NSUserDefaults+TypedKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+TypedKey.swift"; sourceTree = "<group>"; };
+		03C02C451C5A014F000F88B9 /* NSUserDefaults+TypedKeyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+TypedKeyTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 			children = (
 				03C02C021C59FB4D000F88B9 /* TypedKey.h */,
 				03C02C0C1C59FC0F000F88B9 /* TypedKey.swift */,
+				03C02C431C59FFEF000F88B9 /* NSUserDefaults+TypedKey.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				03C02C3A1C59FE5E000F88B9 /* TypedKeyTests.swift */,
+				03C02C451C5A014F000F88B9 /* NSUserDefaults+TypedKeyTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C02C441C59FFEF000F88B9 /* NSUserDefaults+TypedKey.swift in Sources */,
 				03C02C0D1C59FC0F000F88B9 /* TypedKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C02C3B1C59FE5E000F88B9 /* TypedKeyTests.swift in Sources */,
+				03C02C471C5A0188000F88B9 /* NSUserDefaults+TypedKeyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
