@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		03C02C051C59FB4D000F88B9 /* TypedKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 03C02C021C59FB4D000F88B9 /* TypedKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03C02C0D1C59FC0F000F88B9 /* TypedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C02C0C1C59FC0F000F88B9 /* TypedKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03C02BF51C59FAAF000F88B9 /* TypedKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TypedKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C02C021C59FB4D000F88B9 /* TypedKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypedKey.h; sourceTree = "<group>"; };
 		03C02C061C59FB67000F88B9 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		03C02C0C1C59FC0F000F88B9 /* TypedKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				03C02C021C59FB4D000F88B9 /* TypedKey.h */,
+				03C02C0C1C59FC0F000F88B9 /* TypedKey.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C02C0D1C59FC0F000F88B9 /* TypedKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
