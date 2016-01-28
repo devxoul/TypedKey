@@ -25,4 +25,17 @@ import TypedKey
 
 class TypedKeyTests: XCTestCase {
 
+    func testKeyType() {
+        XCTAssert(Key<String, Int>.KeyType.self == String.self)
+    }
+
+    func testValueType() {
+        XCTAssert(Key<String, Int>.ValueType.self == Int.self)
+    }
+
+    func testKey() {
+        let key = Key<String, Int>("myKey")
+        XCTAssertEqual(key.key, "myKey")
+    }
+
 }
