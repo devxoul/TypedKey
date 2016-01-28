@@ -26,39 +26,39 @@ import UIKit
 
 extension UITableView {
 
-    public func registerNib<T: TypedKey where T.KeyType == String>
-    (nib: UINib?, forCellReuseIdentifier identifier: T) {
+    public func registerNib<Key: TypedKey where Key.KeyType == String>
+    (nib: UINib?, forCellReuseIdentifier identifier: Key) {
         self.registerNib(nib, forCellReuseIdentifier: identifier.key)
     }
 
-    public func registerClass<T: TypedKey where T.KeyType == String>
-    (cellClass: AnyClass?, forCellReuseIdentifier identifier: T) {
+    public func registerClass<Key: TypedKey where Key.KeyType == String>
+    (cellClass: AnyClass?, forCellReuseIdentifier identifier: Key) {
         self.registerClass(cellClass, forCellReuseIdentifier: identifier.key)
     }
 
-    public func registerNib<T: TypedKey where T.KeyType == String>
-    (nib: UINib?, forHeaderFooterViewReuseIdentifier identifier: T) {
+    public func registerNib<Key: TypedKey where Key.KeyType == String>
+    (nib: UINib?, forHeaderFooterViewReuseIdentifier identifier: Key) {
         self.registerNib(nib, forHeaderFooterViewReuseIdentifier: identifier.key)
     }
 
-    public func registerClass<T: TypedKey where T.KeyType == String>
-    (aClass: AnyClass?, forHeaderFooterViewReuseIdentifier identifier: T) {
+    public func registerClass<Key: TypedKey where Key.KeyType == String>
+    (aClass: AnyClass?, forHeaderFooterViewReuseIdentifier identifier: Key) {
         self.registerClass(aClass, forHeaderFooterViewReuseIdentifier: identifier.key)
     }
 
-    public func dequeueReusableCellWithIdentifier<T: TypedKey where T.KeyType == String>
-    (identifier: T) -> T.ValueType? {
-        return self.dequeueReusableCellWithIdentifier(identifier.key) as? T.ValueType
+    public func dequeueReusableCellWithIdentifier<Key: TypedKey where Key.KeyType == String>
+    (identifier: Key) -> Key.ValueType? {
+        return self.dequeueReusableCellWithIdentifier(identifier.key) as? Key.ValueType
     }
 
-    public func dequeueReusableCellWithIdentifier<T: TypedKey where T.KeyType == String>
-    (identifier: T, forIndexPath indexPath: NSIndexPath) -> T.ValueType {
-        return self.dequeueReusableCellWithIdentifier(identifier.key, forIndexPath: indexPath) as! T.ValueType
+    public func dequeueReusableCellWithIdentifier<Key: TypedKey where Key.KeyType == String>
+    (identifier: Key, forIndexPath indexPath: NSIndexPath) -> Key.ValueType {
+        return self.dequeueReusableCellWithIdentifier(identifier.key, forIndexPath: indexPath) as! Key.ValueType
     }
 
-    public func dequeueReusableHeaderFooterViewWithIdentifier<T: TypedKey where T.KeyType == String>
-    (identifier: T) -> T.ValueType? {
-        return self.dequeueReusableHeaderFooterViewWithIdentifier(identifier.key) as? T.ValueType
+    public func dequeueReusableHeaderFooterViewWithIdentifier<Key: TypedKey where Key.KeyType == String>
+    (identifier: Key) -> Key.ValueType? {
+        return self.dequeueReusableHeaderFooterViewWithIdentifier(identifier.key) as? Key.ValueType
     }
 
 }

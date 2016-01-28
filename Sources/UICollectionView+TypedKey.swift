@@ -26,35 +26,35 @@ import UIKit
 
 extension UICollectionView {
 
-    public func registerClass<T: TypedKey where T.KeyType == String>
-    (cellClass: AnyClass?, forCellWithReuseIdentifier identifier: T) {
+    public func registerClass<Key: TypedKey where Key.KeyType == String>
+    (cellClass: AnyClass?, forCellWithReuseIdentifier identifier: Key) {
         self.registerClass(cellClass, forCellWithReuseIdentifier: identifier.key)
     }
 
-    public func registerNib<T: TypedKey where T.KeyType == String>
-    (nib: UINib?, forCellWithReuseIdentifier identifier: T) {
+    public func registerNib<Key: TypedKey where Key.KeyType == String>
+    (nib: UINib?, forCellWithReuseIdentifier identifier: Key) {
         self.registerNib(nib, forCellWithReuseIdentifier: identifier.key)
     }
 
-    public func registerClass<T: TypedKey where T.KeyType == String>
-    (viewClass: AnyClass?, forSupplementaryViewOfKind elementKind: String, withReuseIdentifier identifier: T) {
+    public func registerClass<Key: TypedKey where Key.KeyType == String>
+    (viewClass: AnyClass?, forSupplementaryViewOfKind elementKind: String, withReuseIdentifier identifier: Key) {
         self.registerClass(viewClass, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: identifier.key)
     }
 
-    public func registerNib<T: TypedKey where T.KeyType == String>
-    (nib: UINib?, forSupplementaryViewOfKind kind: String, withReuseIdentifier identifier: T) {
+    public func registerNib<Key: TypedKey where Key.KeyType == String>
+    (nib: UINib?, forSupplementaryViewOfKind kind: String, withReuseIdentifier identifier: Key) {
         self.registerNib(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: identifier.key)
     }
 
-    public func dequeueReusableCellWithReuseIdentifier<T: TypedKey where T.KeyType == String>
-    (identifier: T, forIndexPath indexPath: NSIndexPath) -> T.ValueType {
-        return self.dequeueReusableCellWithReuseIdentifier(identifier.key, forIndexPath: indexPath) as! T.ValueType
+    public func dequeueReusableCellWithReuseIdentifier<Key: TypedKey where Key.KeyType == String>
+    (identifier: Key, forIndexPath indexPath: NSIndexPath) -> Key.ValueType {
+        return self.dequeueReusableCellWithReuseIdentifier(identifier.key, forIndexPath: indexPath) as! Key.ValueType
     }
 
-    public func dequeueReusableSupplementaryViewOfKind<T: TypedKey where T.KeyType == String>
-    (elementKind: String, withReuseIdentifier identifier: T, forIndexPath indexPath: NSIndexPath) -> T.ValueType {
+    public func dequeueReusableSupplementaryViewOfKind<Key: TypedKey where Key.KeyType == String>
+    (elementKind: String, withReuseIdentifier identifier: Key, forIndexPath indexPath: NSIndexPath) -> Key.ValueType {
         return dequeueReusableSupplementaryViewOfKind(elementKind, withReuseIdentifier: identifier.key,
-            forIndexPath: indexPath) as! T.ValueType
+            forIndexPath: indexPath) as! Key.ValueType
     }
 
 }

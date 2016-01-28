@@ -26,11 +26,11 @@ import Foundation
 
 public extension NSUserDefaults {
 
-    public func objectForKey<T: TypedKey where T.KeyType == String>(defaultKey: T) -> T.ValueType? {
-        return self.objectForKey(defaultKey.key) as? T.ValueType
+    public func objectForKey<Key: TypedKey where Key.KeyType == String>(defaultKey: Key) -> Key.ValueType? {
+        return self.objectForKey(defaultKey.key) as? Key.ValueType
     }
 
-    public func setObject<T: TypedKey where T.KeyType == String>(value: T.ValueType?, forKey defaultKey: T) {
+    public func setObject<Key: TypedKey where Key.KeyType == String>(value: Key.ValueType?, forKey defaultKey: Key) {
         self.setObject(value as? AnyObject, forKey: defaultKey.key)
     }
 
