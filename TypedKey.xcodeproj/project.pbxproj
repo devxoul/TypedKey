@@ -15,6 +15,7 @@
 		03C02C471C5A0188000F88B9 /* NSUserDefaults+TypedKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C02C451C5A014F000F88B9 /* NSUserDefaults+TypedKeyTests.swift */; };
 		03C02C4D1C5A04C6000F88B9 /* UITableView+TypedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C02C4C1C5A04C6000F88B9 /* UITableView+TypedKey.swift */; };
 		03C02C501C5A081E000F88B9 /* UITableView+TypedKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C02C4E1C5A07EF000F88B9 /* UITableView+TypedKeyTests.swift */; };
+		03C02C521C5A0B26000F88B9 /* UICollectionView+TypedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C02C511C5A0B26000F88B9 /* UICollectionView+TypedKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		03C02C451C5A014F000F88B9 /* NSUserDefaults+TypedKeyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+TypedKeyTests.swift"; sourceTree = "<group>"; };
 		03C02C4C1C5A04C6000F88B9 /* UITableView+TypedKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+TypedKey.swift"; sourceTree = "<group>"; };
 		03C02C4E1C5A07EF000F88B9 /* UITableView+TypedKeyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+TypedKeyTests.swift"; sourceTree = "<group>"; };
+		03C02C511C5A0B26000F88B9 /* UICollectionView+TypedKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+TypedKey.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				03C02C0C1C59FC0F000F88B9 /* TypedKey.swift */,
 				03C02C431C59FFEF000F88B9 /* NSUserDefaults+TypedKey.swift */,
 				03C02C4C1C5A04C6000F88B9 /* UITableView+TypedKey.swift */,
+				03C02C511C5A0B26000F88B9 /* UICollectionView+TypedKey.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C02C441C59FFEF000F88B9 /* NSUserDefaults+TypedKey.swift in Sources */,
+				03C02C521C5A0B26000F88B9 /* UICollectionView+TypedKey.swift in Sources */,
 				03C02C4D1C5A04C6000F88B9 /* UITableView+TypedKey.swift in Sources */,
 				03C02C0D1C59FC0F000F88B9 /* TypedKey.swift in Sources */,
 			);
@@ -412,6 +416,7 @@
 				03C02C411C59FE5E000F88B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
