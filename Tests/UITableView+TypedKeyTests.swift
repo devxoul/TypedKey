@@ -48,6 +48,18 @@ class UITableViewTypedKeyTests: XCTestCase {
         XCTAssertNotNil(self.tableView.dequeueReusableHeaderFooterViewWithIdentifier(sectionHeaderView))
     }
 
+    func testConvenienceRegisterAndDequeueCell() {
+        let userCellIdentifier = StringKey<UserCell>("userCell")
+        self.tableView.registerCell(userCellIdentifier)
+        XCTAssertNotNil(self.tableView.dequeueCell(userCellIdentifier))
+    }
+
+    func testConvenienceRegisterAndDequeueHeaderFooterView() {
+        let sectionHeaderView = StringKey<SectionHeaderView>("sectionHeaderView")
+        self.tableView.registerHeaderFooterView(sectionHeaderView)
+        XCTAssertNotNil(self.tableView.dequeueHeaderFooterView(sectionHeaderView))
+    }
+
 }
 
 private class UserCell: UITableViewCell {}

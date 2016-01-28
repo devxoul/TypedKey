@@ -26,6 +26,8 @@ import UIKit
 
 extension UITableView {
 
+    // MARK: Overloading methods
+
     public func registerNib<Key: TypedKey where Key.KeyType == String>
     (nib: UINib?, forCellReuseIdentifier identifier: Key) {
         self.registerNib(nib, forCellReuseIdentifier: identifier.key)
@@ -59,6 +61,27 @@ extension UITableView {
     public func dequeueReusableHeaderFooterViewWithIdentifier<Key: TypedKey where Key.KeyType == String>
     (identifier: Key) -> Key.ValueType? {
         return self.dequeueReusableHeaderFooterViewWithIdentifier(identifier.key) as? Key.ValueType
+    }
+
+
+    // MARK: Convenience methods
+
+    public func registerCell<Key: TypedKey where Key.KeyType == String, Key.ValueType: UITableViewCell>
+    (identifier: Key) {
+        self.registerClass(identifier.valueType, forCellReuseIdentifier: identifier)
+    }
+
+    public func registerHeaderFooterView<Key: TypedKey where Key.KeyType == String, Key.ValueType: UIView>
+    (identifier: Key) {
+        self.registerClass(identifier.valueType, forHeaderFooterViewReuseIdentifier: identifier)
+    }
+
+    public func dequeueCell<Key: TypedKey where Key.KeyType == String>(identifier: Key) -> Key.ValueType? {
+        return self.dequeueReusableCellWithIdentifier(identifier)
+    }
+
+    public func dequeueHeaderFooterView<Key: TypedKey where Key.KeyType == String>(identifier: Key) -> Key.ValueType? {
+        return self.dequeueReusableHeaderFooterViewWithIdentifier(identifier)
     }
 
 }

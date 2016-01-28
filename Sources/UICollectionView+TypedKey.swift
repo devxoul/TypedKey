@@ -26,6 +26,8 @@ import UIKit
 
 extension UICollectionView {
 
+    // MARK: Overloading methods
+
     public func registerClass<Key: TypedKey where Key.KeyType == String>
     (cellClass: AnyClass?, forCellWithReuseIdentifier identifier: Key) {
         self.registerClass(cellClass, forCellWithReuseIdentifier: identifier.key)
@@ -55,6 +57,29 @@ extension UICollectionView {
     (elementKind: String, withReuseIdentifier identifier: Key, forIndexPath indexPath: NSIndexPath) -> Key.ValueType {
         return dequeueReusableSupplementaryViewOfKind(elementKind, withReuseIdentifier: identifier.key,
             forIndexPath: indexPath) as! Key.ValueType
+    }
+
+
+    // MARK: Convenience methods
+
+    public func registerCell<Key: TypedKey where Key.KeyType == String, Key.ValueType: UICollectionViewCell>
+    (identifier: Key) {
+        self.registerClass(identifier.valueType, forCellWithReuseIdentifier: identifier)
+    }
+
+    public func registerSupplementaryView<Key: TypedKey where Key.KeyType == String, Key.ValueType: UIView>
+    (identifier: Key, forSupplementaryViewOfKind kind: String) {
+        self.registerClass(identifier.valueType, forSupplementaryViewOfKind: kind, withReuseIdentifier: identifier)
+    }
+
+    public func dequeueCell<Key: TypedKey where Key.KeyType == String>
+    (identifier: Key, forIndexPath indexPath: NSIndexPath) -> Key.ValueType {
+        return self.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath)
+    }
+
+    public func dequeueSupplementaryView<Key: TypedKey where Key.KeyType == String>
+    (identifier: Key, ofKind kind: String, forIndexPath indexPath: NSIndexPath) -> Key.ValueType {
+        return dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: identifier, forIndexPath: indexPath)
     }
 
 }
