@@ -28,6 +28,15 @@ public protocol TypedKey {
     init(_ key: KeyType)
 }
 
+public extension TypedKey {
+    var keyType: KeyType.Type {
+        return KeyType.self
+    }
+    var valueType: ValueType.Type {
+        return ValueType.self
+    }
+}
+
 public struct Key<Key, Value>: TypedKey {
     public typealias KeyType = Key
     public typealias ValueType = Value
