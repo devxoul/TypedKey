@@ -38,7 +38,7 @@ NSUserDefaults.standardUserDefaults().objectForKey(userIDKey) // statically type
 ##### UITableView
 
 ```swift
-let userCellIdentifier = StringKey<UserCell><("userCell")
+let userCellIdentifier = StringKey<UserCell>("userCell")
 tableView.registerCell(userCellIdentifier)
 tableView.dequeueCell(userCellIdentifier) // statically typed `UserCell?`
 ```
@@ -46,7 +46,7 @@ tableView.dequeueCell(userCellIdentifier) // statically typed `UserCell?`
 ##### UICollectionView
 
 ```swift
-let photoCellIdentifier = StringKey<PhotoCell><("photoCell")
+let photoCellIdentifier = StringKey<PhotoCell>("photoCell")
 collection.registerCell(photoCellIdentifier)
 collection.dequeueCell(photoCellIdentifier, forIndexPath: ...) // statically typed `PhotoCell?`
 ```
